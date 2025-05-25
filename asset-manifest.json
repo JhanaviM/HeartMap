@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HeartMap/static/css/main.10f22055.css",
+    "main.js": "/HeartMap/static/js/main.67be3232.js",
+    "index.html": "/HeartMap/index.html",
+    "main.10f22055.css.map": "/HeartMap/static/css/main.10f22055.css.map",
+    "main.67be3232.js.map": "/HeartMap/static/js/main.67be3232.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10f22055.css",
+    "static/js/main.67be3232.js"
+  ]
+}
