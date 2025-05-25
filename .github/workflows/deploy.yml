@@ -1,35 +1,30 @@
-# .github/workflows/deploy.yml
 name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Build site
-        run: |
-          # if you're using static files, skip this or use build steps if needed
-          mkdir output
-          cp -r * output || true
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install gh-pages globally
+        run: npm install -g gh-pages
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          folder: output
+        run: npm run deploy
+
+      - name: Confirm success
+        run: echo "🚀 Deployment to GitHub Pages complete!"
