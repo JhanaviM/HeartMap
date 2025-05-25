@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HeartMap</title>
-  <link href="/dist/output.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <header class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">HeartMap</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:text-pink-500">Home</a>
-        <a href="journal.html" class="hover:text-pink-500">Journal</a>
-        <a href="insights.html" class="hover:text-pink-500">Insights</a>
-        <a href="patterns.html" class="hover:text-pink-500">Patterns</a>
-        <a href="zone.html" class="hover:text-pink-500">Zone Check</a>
-        <a href="profile.html" class="hover:text-pink-500">Profile</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Log your dates. Track the signs. Understand your patterns." />
+    <title>HeartMap</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="bg-pink-50 text-gray-800 font-[Times_New_Roman] border border-pink-200">
+    <nav class="bg-white border-b shadow px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-pink-700">HeartMap</h1>
+      <ul class="flex space-x-6 text-[Times_New_Roman]">
+        <li><a href="#home" class="hover:text-pink-500">Home</a></li>
+        <li><a href="#journal" class="hover:text-pink-500">Journal</a></li>
+        <li><a href="#insights" class="hover:text-pink-500">Insights</a></li>
+        <li><a href="#patterns" class="hover:text-pink-500">Patterns</a></li>
+        <li><a href="#zone" class="hover:text-pink-500">Zone Check</a></li>
+        <li><a href="#profile" class="hover:text-pink-500">Profile</a></li>
+      </ul>
+    </nav>
 
-  <main class="max-w-3xl mx-auto mt-16 text-center px-4">
-    <h2 class="text-4xl font-bold mb-4">Welcome to HeartMap ❤️</h2>
-    <p class="text-xl text-gray-600 mb-6">Log your dates. Track red flags. Discover healthy patterns. Know your heart.</p>
-    <a href="journal.html" class="inline-block bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">Start Journaling</a>
-  </main>
+    <header class="text-center py-20 bg-gradient-to-r from-pink-100 to-purple-100 border-b border-pink-200">
+      <h2 class="text-4xl font-extrabold mb-4 text-pink-800">Welcome to HeartMap</h2>
+      <p class="text-lg text-gray-700">Log your dates. Track the signs. Understand your patterns.</p>
+    </header>
 
-  <footer class="mt-20 text-center text-sm text-gray-500">
-    © 2025 HeartMap. All rights reserved.
-  </footer>
-</body>
+    <section id="journal" class="p-8 max-w-4xl mx-auto border-b border-pink-100">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Journal</h3>
+      <p class="mb-4">Record how your dates went, how you felt, what was said and done, and your emotional takeaways.</p>
+      <textarea class="w-full p-4 border border-pink-300 rounded-lg resize-none focus:outline-pink-400" rows="6" placeholder="Write your experience here..."></textarea>
+    </section>
+
+    <section id="insights" class="bg-purple-50 p-8 max-w-4xl mx-auto border-b border-pink-100">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Insights</h3>
+      <p class="mb-4">Get visual feedback on your dating trends. We'll analyze mood swings, common words, and red/green flag density.</p>
+      <div class="text-center italic text-gray-500">(Charts and graphs will be displayed here)</div>
+    </section>
+
+    <section id="patterns" class="p-8 max-w-4xl mx-auto border-b border-pink-100">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Patterns</h3>
+      <p>Identify recurring behaviors — both yours and theirs. See your emotional arcs and identify toxic loops or healthy growth.</p>
+    </section>
+
+    <section id="zone" class="bg-purple-50 p-8 max-w-4xl mx-auto border-b border-pink-100">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Zone Check</h3>
+      <p class="mb-2">Wondering where things are headed? Take our quiz to find out if you're in the:</p>
+      <ul class="list-disc list-inside ml-4 text-pink-700">
+        <li>Red Flag Zone</li>
+        <li>Mixed Signals Zone</li>
+        <li>Green Flag Zone</li>
+      </ul>
+      <button class="mt-4 px-5 py-2 bg-pink-500 text-white font-semibold rounded-lg shadow-md hover:bg-pink-600">Take the Quiz</button>
+    </section>
+
+    <section id="profile" class="p-8 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-700">Your Profile</h3>
+      <p class="mb-4">Track how your intuition matches up with data. See your top emotional triggers, values, and dealbreakers.</p>
+      <div class="text-center italic text-gray-500">(Profile and preferences will be shown here)</div>
+    </section>
+
+    <footer class="text-center py-6 border-t mt-8 text-sm text-gray-600">
+      &copy; 2025 HeartMap. All rights reserved.
+    </footer>
+  </body>
 </html>
